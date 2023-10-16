@@ -1,0 +1,6 @@
+@import url("normalize.css");
+
+body,
+html {
+	font-family: "Gabarito", sans-serif;
+}
