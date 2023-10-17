@@ -1,7 +1,8 @@
-import "./styles/style.css";
+import "./styles/styles.css";
+import { RouterProvider } from "@/app/providers/RouterProvider";
 
 const App = () => {
-	return <div>Some</div>;
+	return <RouterProvider />;
 };
 
 export default App;

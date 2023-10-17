@@ -1,8 +1,8 @@
+import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import Unfonts from "unplugin-fonts/vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
 		react(),
@@ -10,11 +10,19 @@ export default defineConfig({
 			google: {
 				families: [
 					{
-						name: "Gabarito",
-						styles: "wght@400;500;700",
+						name: "Nunito",
+						styles: "wght@400;500;600;700",
 					},
 				],
 			},
 		}),
 	],
+	resolve: {
+		alias: [
+			{
+				find: "@",
+				replacement: path.resolve(__dirname, "src"),
+			},
+		],
+	},
 });

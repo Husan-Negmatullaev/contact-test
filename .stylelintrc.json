@@ -1,12 +1,12 @@
 {
-  "extends": ["stylelint-config-standard"],
-  "overrides": [
-    {
-      "files": ["*.js"],
-      "customSyntax": "postcss-lit"
-    }
-  ],
-  "rules": {
-    "font-family-name-quotes": "always-unless-keyword"
-  }
+	"extends": ["stylelint-config-standard"],
+	"overrides": [
+		{
+			"files": ["*.js"],
+			"customSyntax": "postcss-lit"
+		}
+	],
+	"rules": {
+		"font-family-name-quotes": "always-unless-keyword"
+	}
 }

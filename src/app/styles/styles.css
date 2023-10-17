@@ -1,0 +1,21 @@
+@import url("base/variables.css");
+@import url("base/null.css");
+
+body {
+	background-color: var(--secondary-color);
+}
+
+.wrapper {
+	display: flex;
+	min-height: 100%;
+	overflow: hidden;
+	flex-direction: column;
+}
+
+.wrapper > main {
+	flex: 1 1 auto;
+}
+
+.wrapper > * {
+	min-width: 0;
+}

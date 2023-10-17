@@ -1,0 +1,22 @@
+.button {
+	font-size: 18px;
+	font-weight: 700;
+	padding: 8px 12px;
+	border-radius: 8px;
+	color: var(--secondary-color);
+	outline: 3px solid transparent;
+	background-color: var(--primary-color);
+	transition: 0.3s background-color 0s ease;
+}
+
+.button:focus-visible {
+	outline-color: var(--main-color);
+}
+
+.button.primary {
+
+}
+
+.button.primary:hover {
+	background-color: var(--accent-color);
+}
