@@ -1,0 +1,13 @@
+.list {
+    margin: 25px 0;
+}
+
+.list__body {}
+
+.list__search {
+
+}
+
+.list__search:not(:last-child) {
+    margin-bottom: 15px;
+}

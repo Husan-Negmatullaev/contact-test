@@ -16,6 +16,7 @@ export type Contact = {
 
 export type GetAllContactsQueryArgs = {
 	userId?: number;
+	searchQuery?: string;
 };
 
 export type GetContactByIdQueryArgs = {

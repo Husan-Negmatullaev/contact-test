@@ -51,3 +51,7 @@
 }
 
 .contacts__list {}
+
+.contacts__list_loading {
+    opacity: 0.6;
+}

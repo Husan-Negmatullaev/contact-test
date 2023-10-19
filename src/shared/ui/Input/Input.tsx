@@ -27,10 +27,11 @@ export const Input: FC<InputProps> = memo((props) => {
 		type = "text",
 		value,
 		rootRef,
+		variant = "bordered",
 		onChange,
 		disabled = false,
 		labelTitle,
-		variant = "bordered",
+		className,
 		...otherProps
 	} = props;
 	const htmlForId = useId();
@@ -43,7 +44,7 @@ export const Input: FC<InputProps> = memo((props) => {
 	);
 
 	return (
-		<div>
+		<div className={className}>
 			{labelTitle && (
 				<label className={classes.label} htmlFor={htmlForId}>
 					{labelTitle}

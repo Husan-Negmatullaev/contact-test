@@ -6,6 +6,8 @@ import { Button } from "@/shared/ui/Button/Button.tsx";
 import classes from "./ListContacts.module.css";
 import { ContactItem } from "@/entities/Contact";
 import { Loader } from "@/shared/ui/Loader/Loader.tsx";
+import { clsx } from "clsx";
+import { Title } from "@/shared/ui/Title/Title.tsx";
 
 type ListContactsProps = {
 	isLoading?: boolean;
@@ -17,30 +19,15 @@ type ListContactsProps = {
 
 export const ListContacts: FC<ListContactsProps> = (props) => {
 	const {
-		isFirstLoading,
-		isLoading = false,
 		contacts,
+		isLoading,
+		isFirstLoading,
 		openAddContact,
 		updateListContacts,
 	} = props;
 
 	if (isFirstLoading) {
 		return <Loader align="center" />;
-	}
-
-	if (!contacts?.length && !isLoading) {
-		return (
-			<Button
-				variant={"primary"}
-				className={classes.addContact}
-				onClick={() => openAddContact?.()}
-			>
-				<div className={classes.addContact__body}>
-					<h2 className={classes.addContact__title}>Добавить контакт</h2>
-					<PlusIcon className={classes.addContact__icon} />
-				</div>
-			</Button>
-		);
 	}
 
 	return (
@@ -65,10 +52,21 @@ export const ListContacts: FC<ListContactsProps> = (props) => {
 					<PlusIcon />
 				</Button>
 			</div>
-			<div className={classes.contacts__list}>
+			<div
+				className={clsx(
+					classes.contacts__list,
+					isLoading && classes.contacts__list_loading,
+				)}
+			>
 				{contacts?.map((contactItem) => (
 					<ContactItem key={contactItem.id} contact={contactItem} />
 				))}
+
+				{!contacts?.length && (
+					<Title align="center" titleElemVariant="h3">
+						Нету контактов
+					</Title>
+				)}
 			</div>
 		</div>
 	);

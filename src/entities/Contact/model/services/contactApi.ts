@@ -13,10 +13,11 @@ export const contactApi = createApi({
 	tagTypes: ["Contacts"],
 	endpoints: (builder) => ({
 		getAllContacts: builder.query<Contact[], GetAllContactsQueryArgs>({
-			query: ({ userId }: GetAllContactsQueryArgs) => ({
+			query: ({ userId, searchQuery }: GetAllContactsQueryArgs) => ({
 				url: "/contacts",
 				params: {
 					userId,
+					q: searchQuery,
 				},
 			}),
 			transformResponse: (baseQueryReturnValue: Contact[], _, arg) => {
