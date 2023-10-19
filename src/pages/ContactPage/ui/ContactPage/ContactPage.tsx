@@ -1,14 +1,17 @@
 import { FC } from "react";
-import { clsx } from "clsx";
-import { ClassNameType } from "@/shared/types/types.ts";
 import { Container } from "@/shared/ui/Container/Container.tsx";
+import { ChangeContact } from "@/features/ChangeContact";
+import classes from "./ContactPage.module.css";
+import { useParams } from "react-router-dom";
 
-export const ContactPage: FC<ClassNameType> = (props) => {
-	const { classNames } = props;
+export const ContactPage: FC = () => {
+	const params = useParams();
 
 	return (
-		<section className={clsx(classNames)}>
-			<Container>Contacts Page</Container>
+		<section className={classes.contact}>
+			<Container min>
+				<ChangeContact contactId={Number(params.id)} />
+			</Container>
 		</section>
 	);
 };

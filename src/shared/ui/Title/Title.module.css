@@ -1,0 +1,40 @@
+.title {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.title.left {
+    text-align: left;
+}
+
+.title.center {
+    text-align: center;
+}
+
+.title.right {
+    text-align: right;
+}
+
+.title.h1 {
+    font-size: 36px;
+}
+
+.title.h2 {
+    font-size: 32px;
+}
+
+.title.h3 {
+    font-size: 26px;
+}
+
+.title.h4 {
+    font-size: 20px;
+}
+
+.title.h5 {
+    font-size: 18px;
+}
+
+.title.h6 {
+    font-size: 14px;
+}

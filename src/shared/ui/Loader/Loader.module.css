@@ -1,0 +1,31 @@
+.loader {
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 5px solid var(--secondary-color-active);
+    border-bottom-color: var(--info-color);
+    animation: rotation 1s linear infinite;
+}
+
+.loader.left {
+    margin-right: auto;
+}
+
+.loader.center {
+    margin: 0 auto;
+}
+
+.loader.right {
+    margin-left: auto;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

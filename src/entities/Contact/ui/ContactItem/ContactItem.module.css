@@ -1,0 +1,39 @@
+.contact {
+    display: block;
+    padding: 12px 10px;
+    border-top: 1px solid var(--secondary-color-hover);
+    transition: 0.3s background-color 0s ease;
+}
+
+.contact:hover .contact__info {
+    text-decoration: underline;
+}
+
+.contact:active {
+    background-color: var(--secondary-color-active);
+}
+
+.contact:last-child {
+    border-bottom: 1px solid var(--secondary-color-hover);
+}
+
+.contact__content {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact__content:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.contact__info {
+    color: var(--secondary-color);
+}
+
+.contact__tags {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}

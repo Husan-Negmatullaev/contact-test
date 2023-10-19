@@ -4,3 +4,7 @@
 	max-width: 1200px;
 	box-sizing: content-box;
 }
+
+.container.min {
+	max-width: 650px;
+}

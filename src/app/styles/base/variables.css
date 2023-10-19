@@ -5,7 +5,22 @@
 	--main-color: #000000;
 	--primary-color: #04D010;
 	--accent-color: #008000;
-	--secondary-color: #F4FBF4;
+	--white-color: #F4FBF4;
+	--secondary-color: #999999;
+	--info-color: #2070EA;
+	--error-color: #ff0000;
+	--warning-color: #FAC52D;
+
+	/* Action colors */
+
+	--secondary-color-hover: rgba(153, 153, 153, 0.8);
+	--secondary-color-active: rgba(153, 153, 153, 0.2);
+
+	--info-color-hover: #14489a;
+
+	--error-color-hover: rgba(255, 0, 0, 0.8);
+
+	--warning-color-hover: rgb(168, 132, 30);
 
 	/*  Sizes  */
 	--font-size: 14px;

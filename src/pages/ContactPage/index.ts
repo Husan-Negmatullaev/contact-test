@@ -1,1 +1,1 @@
-export { ContactPage } from "@/pages/ContactPage/ui/ContactPage/ContactPage.tsx";
+export { ContactPage } from "./ui/ContactPage/ContactPage.tsx";

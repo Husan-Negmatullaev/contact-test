@@ -1,0 +1,14 @@
+.error {
+    color: var(--error-color);
+}
+
+.error__item {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.error__item:not(:last-child) {
+    margin-bottom: 5px;
+}

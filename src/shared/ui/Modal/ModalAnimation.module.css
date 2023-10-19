@@ -1,0 +1,39 @@
+.overlay_enter {
+    opacity: 0;
+}
+
+.overlay_enterActive {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.overlay_exit {
+    opacity: 1;
+}
+
+.overlay_exitActive {
+    opacity: 0;
+    transition: 0s opacity 0.3s ease-out;
+}
+
+.content_enter {
+    opacity: 0;
+    transform: scale(0.01);
+}
+
+.content_enterActive {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.1s ease-out 0.2s, transform 0.1s ease-out 0.2s;
+}
+
+.content_exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.content_exitActive {
+    opacity: 0;
+    transform: scale(0.01);
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+}

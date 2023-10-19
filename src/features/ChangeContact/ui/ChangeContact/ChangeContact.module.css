@@ -1,0 +1,58 @@
+.contact {
+
+}
+
+.contact__title:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.contact__form {
+}
+
+.contact__group {
+    gap: 15px;
+    display: grid;
+}
+
+.contact__groupButton {
+    grid-auto-flow: column;
+}
+
+.contact__addButton {
+    align-self: end;
+    justify-self: end;
+    grid-column: 3 / 4;
+}
+
+.contact__addButton svg {
+    width: 25px;
+    height: 25px;
+}
+
+.contact__group:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.contact__group_2 {
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+}
+
+.contact__group_3 {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.contact__tags {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact__tags:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.contact__actions {
+    gap: 10px;
+    display: flex;
+    justify-content: flex-end;
+}

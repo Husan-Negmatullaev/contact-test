@@ -1,5 +1,5 @@
 export type ClassNameType<T = {}> = {
-	classNames?: string;
+	className?: string;
 } & T;
 
 export type ClassNameProps = {

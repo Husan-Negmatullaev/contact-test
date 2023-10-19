@@ -1,0 +1,53 @@
+.list {
+
+}
+
+.addContact {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    min-height: 300px;
+    padding: 10px 15px;
+    border-radius: 16px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    transition: 0.3s background-color ease 0s;
+}
+
+.addContact:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+.addContact__body {}
+
+.addContact__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.addContact__icon {
+    width: 70px;
+    height: 70px;
+}
+
+.contacts {}
+
+.contacts__header {
+    text-align: right;
+}
+
+.contacts__header:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.contacts__refresh:not(:last-child) {
+    margin-right: 10px;
+}
+
+.contacts__refresh svg {
+    width: 25px;
+    height: 25px;
+}
+
+.contacts__list {}

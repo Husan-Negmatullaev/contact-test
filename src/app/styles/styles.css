@@ -2,7 +2,7 @@
 @import url("base/null.css");
 
 body {
-	background-color: var(--secondary-color);
+	background-color: var(--white-color);
 }
 
 .wrapper {

@@ -1,0 +1,20 @@
+.tags {
+    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tags:not(:empty) {
+    margin-bottom: 10px;
+}
+
+.addButton {
+    align-self: end;
+    grid-column: 4 / 5;
+}
+
+.addButton svg {
+    width: 25px;
+    height: 25px;
+}

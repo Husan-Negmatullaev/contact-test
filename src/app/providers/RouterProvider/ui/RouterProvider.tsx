@@ -1,14 +1,18 @@
 import { useCallback } from "react";
-import { AppRouteType, routeConfig } from "../config/routerConfig.tsx";
 import {
+	AppRouteObject,
+	AppRouteType,
+	routeConfig,
+} from "../config/routerConfig.tsx";
+import {
+	RouteObject,
 	createBrowserRouter,
 	RouterProvider as BrowserRouter,
-	RouteObject,
 } from "react-router-dom";
-import { CheckAuth } from "@/app/providers/RouterProvider/ui/CheckAuth.tsx";
+import { CheckAuth } from "./CheckAuth.tsx";
 
 export const RouterProvider = () => {
-	const mapRouteByAuthedUser = useCallback((routers: AppRouteType[]) => {
+	const mapRouteByAuthedUser = useCallback((routers: AppRouteObject[]) => {
 		return routers.map(
 			(route): RouteObject => ({
 				path: route.path,
@@ -17,7 +21,17 @@ export const RouterProvider = () => {
 				) : (
 					route.element
 				),
-				children: route.children,
+				children: route.children?.map(
+					(childRoute: RouteObject & AppRouteType): RouteObject => ({
+						path: childRoute.path,
+						index: childRoute.index,
+						element: childRoute.private ? (
+							<CheckAuth>{childRoute.element}</CheckAuth>
+						) : (
+							childRoute.element
+						),
+					}),
+				),
 			}),
 		);
 	}, []);

@@ -1,9 +1,11 @@
 .header {}
 
 .header__logo {
-    height: 48px;
-    flex: 0 0 48px;
+    height: 50px;
+    flex: 0 0 50px;
+    align-items: center;
     border-radius: 10px;
+    display: inline-flex;
     outline: 3px solid transparent;
 }
 
@@ -43,6 +45,12 @@
 
 .headerNav__item {
 
+}
+
+.headerNav__item_userName {
+    gap: 10px;
+    align-items: center;
+    display: inline-flex;
 }
 
 .headerNav__link {
