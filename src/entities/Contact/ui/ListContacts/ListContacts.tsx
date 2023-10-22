@@ -15,12 +15,14 @@ type ListContactsProps = {
 	isFirstLoading?: boolean;
 	openAddContact?: () => void;
 	updateListContacts?: () => void;
+	deleteContact?: (id: number) => void;
 };
 
 export const ListContacts: FC<ListContactsProps> = (props) => {
 	const {
 		contacts,
 		isLoading,
+		deleteContact,
 		isFirstLoading,
 		openAddContact,
 		updateListContacts,
@@ -59,7 +61,11 @@ export const ListContacts: FC<ListContactsProps> = (props) => {
 				)}
 			>
 				{contacts?.map((contactItem) => (
-					<ContactItem key={contactItem.id} contact={contactItem} />
+					<ContactItem
+						key={contactItem.id}
+						contact={contactItem}
+						deleteContact={deleteContact}
+					/>
 				))}
 
 				{!contacts?.length && (

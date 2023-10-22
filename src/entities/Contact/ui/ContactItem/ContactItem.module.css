@@ -1,6 +1,6 @@
 .contact {
     display: block;
-    padding: 12px 10px;
+    padding: 12px 0;
     border-top: 1px solid var(--secondary-color-hover);
     transition: 0.3s background-color 0s ease;
 }
@@ -30,6 +30,17 @@
 
 .contact__info {
     color: var(--secondary-color);
+}
+
+.contact__actions {}
+
+.contact__action:not(:last-child) {
+    margin-right: 10px;
+}
+
+.contact__action svg {
+    width: 25px;
+    height: 25px;
 }
 
 .contact__tags {

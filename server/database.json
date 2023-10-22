@@ -1,110 +1,11 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Husan",
-      "password": "123456",
-      "email": "husan@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "Daler",
-      "password": "789012",
-      "email": "daler@gmail.com"
-    },
-    {
-      "name": "Hasan",
-      "email": "hasan@gmail.com",
-      "password": "12345678",
-      "id": 3
+      "name": "husan",
+      "email": "some@gmail.com",
+      "password": "1234567",
+      "id": 1
     }
   ],
-  "contacts": [
-    {
-      "id": 1,
-      "userId": 1,
-      "name": "Husan",
-      "email": "husan@gmail.com",
-      "surname": "Negmatullaev",
-      "middleName": "Ahmadovich",
-      "phone": "+998 (99) 999 99 99",
-      "tags": [
-        {
-          "id": 0,
-          "title": "family"
-        },
-        {
-          "id": 1,
-          "title": "me"
-        },
-        {
-          "id": 1697715275632,
-          "title": "some"
-        },
-        {
-          "id": 1697715293432,
-          "title": "ne"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "userId": 2,
-      "name": "Amir",
-      "email": "amir@gmail.com",
-      "surname": "Surname",
-      "middleName": "Mid Name",
-      "phone": "+998 (88) 888 88 88",
-      "tags": [
-        {
-          "id": 0,
-          "title": "relationship"
-        }
-      ]
-    },
-    {
-      "name": "husan",
-      "tags": [],
-      "email": "husan@gmail.com",
-      "phone": "+998 99 777 77 77",
-      "surname": "negmatullaev",
-      "middleName": "ahmadovich",
-      "userId": 4,
-      "id": 3
-    },
-    {
-      "name": "husan",
-      "tags": [
-        {
-          "id": 1697706531007,
-          "title": "me"
-        },
-        {
-          "id": 1697706536637,
-          "title": "relationship"
-        }
-      ],
-      "email": "husantrue@mail.ru",
-      "phone": "+998 777 77 77",
-      "surname": "negmatullaev",
-      "middleName": "ahmadovich",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "Husan",
-      "tags": [
-        {
-          "id": 1697998921707,
-          "title": "relationship"
-        }
-      ],
-      "email": "husan@gmail.com",
-      "phone": "+998 99 219 05 47",
-      "surname": "Negmatullaev",
-      "middleName": "Ahmadovich",
-      "userId": 3,
-      "id": 5
-    }
-  ]
+  "contacts": []
 }

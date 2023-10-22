@@ -1,9 +1,13 @@
 import { AddContactModal } from "@/features/AddContactModal";
-import { ListContacts, useGetAllContactsQuery } from "@/entities/Contact";
+import {
+	ListContacts,
+	useDeleteContactMutation,
+	useGetAllContactsQuery,
+} from "@/entities/Contact";
 import { Title } from "@/shared/ui/Title/Title.tsx";
 import { useSelector } from "react-redux";
 import { userSelector } from "@/entities/User";
-import { FC, useState } from "react";
+import { FC, useCallback, useState } from "react";
 import { ClassNameType } from "@/shared/types/types.ts";
 import { clsx } from "clsx";
 import { Input } from "@/shared/ui/Input/Input.tsx";
@@ -19,7 +23,9 @@ export const ListContactsWithSearchInput: FC<
 	const user = useSelector(userSelector);
 	const [searchValue, setSearchValue] = useState("");
 	const debouncedSearchValue = useDebounce<string>(searchValue, 500);
+	const [deleteContact] = useDeleteContactMutation();
 	const [isOpenModalAddContact, setIsOpenModalContact] = useState(false);
+
 	const { data, isFetching, isLoading, refetch } = useGetAllContactsQuery(
 		{
 			userId: user?.id,
@@ -28,6 +34,13 @@ export const ListContactsWithSearchInput: FC<
 		{
 			refetchOnMountOrArgChange: true,
 		},
+	);
+
+	const handleDeleteContact = useCallback(
+		(contactId: number) => {
+			deleteContact(contactId);
+		},
+		[deleteContact],
 	);
 
 	return (
@@ -54,6 +67,7 @@ export const ListContactsWithSearchInput: FC<
 						isLoading={isFetching}
 						isFirstLoading={isLoading}
 						updateListContacts={refetch}
+						deleteContact={handleDeleteContact}
 						openAddContact={() => setIsOpenModalContact(true)}
 					/>
 				</div>

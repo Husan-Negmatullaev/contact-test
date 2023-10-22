@@ -26,7 +26,12 @@ export const contactApi = createApi({
 				);
 			},
 			providesTags: (result) =>
-				result ? result.map(({ id }) => ({ type: "Contacts", id })) : ["Contacts"],
+				!result
+					? ["Contacts"]
+					: [
+							...result.map(({ id }) => ({ type: "Contacts", id }) as const),
+							{ type: "Contacts", id: "LIST" },
+					  ],
 		}),
 		getContactById: builder.query<Contact, GetContactByIdQueryArgs>({
 			query: (args) => ({
@@ -41,7 +46,7 @@ export const contactApi = createApi({
 				method: "POST",
 				body: contact,
 			}),
-			invalidatesTags: ["Contacts"],
+			invalidatesTags: [{ type: "Contacts", id: "LIST" }],
 		}),
 		updateContact: builder.mutation<Contact, Contact>({
 			query: (contact: Contact) => ({
@@ -49,15 +54,14 @@ export const contactApi = createApi({
 				method: "PATCH",
 				body: contact,
 			}),
-			invalidatesTags: (result) =>
-				result ? [{ type: "Contacts", id: result.id }] : ["Contacts"],
+			invalidatesTags: (_, __, { id }) => [{ type: "Contacts", id }],
 		}),
-		deleteContact: builder.mutation<void, Contact>({
-			query: ({ id }) => ({
+		deleteContact: builder.mutation<void, number>({
+			query: (id) => ({
 				url: `/contacts/${id}`,
 				method: "DELETE",
 			}),
-			invalidatesTags: ["Contacts"],
+			invalidatesTags: (_, __, id) => [{ type: "Contacts", id }],
 		}),
 	}),
 });
