@@ -13,16 +13,10 @@
       "email": "daler@gmail.com"
     },
     {
-      "name": "daler",
-      "email": "daler@gmail.com",
-      "password": "1234567",
+      "name": "Hasan",
+      "email": "hasan@gmail.com",
+      "password": "12345678",
       "id": 3
-    },
-    {
-      "name": "new",
-      "email": "new@gmail.com",
-      "password": "1234567",
-      "id": 4
     }
   ],
   "contacts": [
@@ -96,6 +90,21 @@
       "middleName": "ahmadovich",
       "userId": 1,
       "id": 4
+    },
+    {
+      "name": "Husan",
+      "tags": [
+        {
+          "id": 1697998921707,
+          "title": "relationship"
+        }
+      ],
+      "email": "husan@gmail.com",
+      "phone": "+998 99 219 05 47",
+      "surname": "Negmatullaev",
+      "middleName": "Ahmadovich",
+      "userId": 3,
+      "id": 5
     }
   ]
 }

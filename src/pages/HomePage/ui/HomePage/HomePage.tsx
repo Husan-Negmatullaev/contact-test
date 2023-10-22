@@ -1,7 +1,7 @@
 import { FC } from "react";
 import classes from "./HomePage.module.css";
 import { Container } from "@/shared/ui/Container/Container.tsx";
-import { ListContactsWithSearchInput } from "@/widgets/ListContactsWithSearchInput";
+import { ListContactsWithSearchInput } from "@/widgets/ListContactsWithFilterInput";
 
 export const HomePage: FC = () => {
 	return (
